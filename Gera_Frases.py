@@ -20,8 +20,7 @@ class geraFrases():
             'Verbo1PLUR'   : [('estudamos','Final'),('brincamos','Final'),('matamos','Final'),],
             'Verbo2PLUR'   : [('estudaram','Final'),('brincaram','Final'),('mataram','Final')]
         }
-        print('Foi Inicializado')
-
+        
     def insertProd(self,PessoaM,PessoaF,PessoaMP,PessoaFP,LocasM,LocasF,Verbo1,Verbo2,Verbo3,Verbo4):
         if self.confirma == False:
             self.prod = {

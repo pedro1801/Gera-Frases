@@ -125,7 +125,7 @@ class Ui_MainWindow(object):
         self.toolBox.addItem(self.Home, u"Home")
         self.Informaoes = QWidget()
         self.Informaoes.setObjectName(u"Informaoes")
-        self.Informaoes.setGeometry(QRect(0, 0, 86, 86))
+        self.Informaoes.setGeometry(QRect(0, 0, 182, 524))
         self.verticalLayout_11 = QVBoxLayout(self.Informaoes)
         self.verticalLayout_11.setObjectName(u"verticalLayout_11")
         self.plainTextEdit = QPlainTextEdit(self.Informaoes)
@@ -440,8 +440,8 @@ class Ui_MainWindow(object):
         self.btn_VerFrases.setText(QCoreApplication.translate("MainWindow", u"Ver Frases", None))
         self.btn_sobre.setText(QCoreApplication.translate("MainWindow", u"Sobre Programa", None))
         self.toolBox.setItemText(self.toolBox.indexOf(self.Home), QCoreApplication.translate("MainWindow", u"Home", None))
-        self.plainTextEdit.setPlainText(QCoreApplication.translate("MainWindow", u"Trabalho deselvolvido\n"
-"                por\n"
+        self.plainTextEdit.setPlainText(QCoreApplication.translate("MainWindow", u"Trabalho desenvolvido\n"
+"                 por\n"
 "\n"
 "      Pedro Eduardo\n"
 "\n"
@@ -456,16 +456,16 @@ class Ui_MainWindow(object):
         self.label.setText(QCoreApplication.translate("MainWindow", u"Gera Frases", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/icons/logoino.png\"/></p></body></html>", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">INSERIR PALAVRAS</span></p></body></html>", None))
-        self.pessoaMasculina.setPlaceholderText(QCoreApplication.translate("MainWindow", u"PESSOA MASCULINO", None))
-        self.pessoaFeminino.setPlaceholderText(QCoreApplication.translate("MainWindow", u"PESSOA FEMININO", None))
-        self.pessoaPluralMasculino.setPlaceholderText(QCoreApplication.translate("MainWindow", u"PESSOA NO PLURAL MASCULINO", None))
-        self.pessoaPluralFeminino.setPlaceholderText(QCoreApplication.translate("MainWindow", u"PESSOA NO PLURAL FEMININO", None))
-        self.locaisMasculinos.setPlaceholderText(QCoreApplication.translate("MainWindow", u"LOCAIS MASCULINOS", None))
-        self.locaisFemininos.setPlaceholderText(QCoreApplication.translate("MainWindow", u"LOCAIS FEMININOS", None))
-        self.verbosPsingular.setPlaceholderText(QCoreApplication.translate("MainWindow", u"VERBOS NA PRIMEIRA PESSOA DO SINGULAR", None))
-        self.verboSSIngular.setPlaceholderText(QCoreApplication.translate("MainWindow", u"VERBOS NA SEGUNDA PESSOA DO SINGULAR", None))
-        self.verbosPPlural.setPlaceholderText(QCoreApplication.translate("MainWindow", u"VERBOS NA PRIMEIRA PESSOA DO PLURAL", None))
-        self.verbosSPlural.setPlaceholderText(QCoreApplication.translate("MainWindow", u"VERBOS NA SEGUNDA PESSOA DO PLURAL", None))
+        self.pessoaMasculina.setPlaceholderText(QCoreApplication.translate("MainWindow", u"PESSOA MASCULINO (EX:Pedro,Joao..)", None))
+        self.pessoaFeminino.setPlaceholderText(QCoreApplication.translate("MainWindow", u"PESSOA FEMININO (EX:Maria,Ana..)", None))
+        self.pessoaPluralMasculino.setPlaceholderText(QCoreApplication.translate("MainWindow", u"PESSOA NO PLURAL MASCULINO (EX:Garotos,Meninos..)", None))
+        self.pessoaPluralFeminino.setPlaceholderText(QCoreApplication.translate("MainWindow", u"PESSOA NO PLURAL FEMININO (EX:Gartas,Meninas..)", None))
+        self.locaisMasculinos.setPlaceholderText(QCoreApplication.translate("MainWindow", u"LOCAIS MASCULINOS (EX:Bracos,Restaurante..)", None))
+        self.locaisFemininos.setPlaceholderText(QCoreApplication.translate("MainWindow", u"LOCAIS FEMININOS (EX:Casa,Pra\u00e7a..)", None))
+        self.verbosPsingular.setPlaceholderText(QCoreApplication.translate("MainWindow", u"VERBOS NA PRIMEIRA PESSOA DO SINGULAR (EX:Estudei,Comprei..)", None))
+        self.verboSSIngular.setPlaceholderText(QCoreApplication.translate("MainWindow", u"VERBOS NA SEGUNDA PESSOA DO SINGULAR (EX:Estudou,Comprou..)", None))
+        self.verbosPPlural.setPlaceholderText(QCoreApplication.translate("MainWindow", u"VERBOS NA PRIMEIRA PESSOA DO PLURAL (EX:Estudamos,Compramos..)", None))
+        self.verbosSPlural.setPlaceholderText(QCoreApplication.translate("MainWindow", u"VERBOS NA SEGUNDA PESSOA DO PLURAL (EX:Estudaram,Compraram..)", None))
         self.btn_inserir.setText(QCoreApplication.translate("MainWindow", u"Inserir", None))
         self.btn_Busca.setText(QCoreApplication.translate("MainWindow", u"Gerar Frases", None))
         self.btn_limpar.setText(QCoreApplication.translate("MainWindow", u"Limpar Lista de Frases", None))
@@ -473,13 +473,7 @@ class Ui_MainWindow(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<ol style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;\"><li style=\"\" style=\" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Este programa tem como intuito gerar frases aleatoriamente.</li>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;\"><br /></p>\n"
-"<li style=\"\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Pessoas est\u00e3o se referindo a gente, por exemplo: senhor, senhora, pai, m\u00e3e.."
-                        ".</li>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;\"><br /></p>\n"
-"<li style=\"\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Locais est\u00e3o se referindo a locais reais, por exemplo: mercado, escola, livraria...</li>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;\"><br /></p>\n"
-"<li style=\"\" style=\" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Os verbos devem ser conjugados no passado.</li></ol></body></html>", None))
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Roboto','Helvetica','Arial','sans-serif'; font-size:16pt; color:rgba(0,0,0,0.866667);\">Implementar um software que seja capaz de gerar INFINITOS textos aleat\u00f3rios em um subconjunto da l\u00edngua Portuguesa (ou algum outro dom\u00ednio interessante) especificado atrav\u00e9s de uma gram\u00e1tica livre de contexto. O software deve mostrar a gram\u00e1tica utilizada. Exemplos de funcionalidades que podem levar ao m\u00e1ximo de PIC$: permitir que o usu\u00e1rio entre com a gram\u00e1tica, mostrar a sequ\u00eancia d"
+                        "e produ\u00e7\u00f5es usadas para gerar alguma cadeia,\u00a0 mostrar a \u00e1rvore de deriva\u00e7\u00e3o, etc. Alternativamente, voc\u00ea pode gerar m\u00fasica aleatoriamente, seguindo uma gram\u00e1tica que permita combina\u00e7\u00f5es que fa\u00e7am sentido musicalmente (neste caso, \u00e9 preciso entender minimamente de teoria musical). Ou ent\u00e3o, gerar imagens aleatoriamente usando L-Systems ou afins (tem bastante material na internet sobre isso).</span></p></body></html>", None))
     # retranslateUi
 

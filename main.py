@@ -51,6 +51,7 @@ class mainwindow(QMainWindow,Ui_MainWindow):
         self.ListaFrase.setModel(self.model)
     def limparFrases(self):
         self.model.clear()
+        self.frases = []
     ## Função que ira pegar os valores
     def pegaValor(self):
         pessoaMasculina = self.pessoaMasculina.text()
@@ -74,6 +75,16 @@ class mainwindow(QMainWindow,Ui_MainWindow):
             msg.setText('Inserido com suceso:')
             msg.exec()
             self.gerar.insertProd(pessoaMasculina,pessoaFeminino,pessoanoPluralM,pessoanoPluralF,localMasculino,localFeminino,verbosPsingular,verboSSIngular,verbosPPlural,verbosSPlural)
+            self.pessoaMasculina.clear()
+            self.pessoaFeminino.clear()
+            self.pessoaPluralMasculino.clear()
+            self.pessoaPluralFeminino.clear()
+            self.locaisMasculinos.clear()
+            self.locaisFemininos.clear()
+            self.verbosPsingular.clear()
+            self.verbosPPlural.clear()
+            self.verboSSIngular.clear()
+            self.verbosSPlural.clear()
 
     # Função para fazer a animação
     def abreMenu(self):
