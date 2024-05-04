@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icons">
+    <file>logoino.png</file>
     <file>email.png</file>
     <file>logo4.png</file>
     <file>menu.png</file>

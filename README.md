@@ -1,5 +1,16 @@
-# Gera Frases
+# Gerador de Frases Aleatórias
 
 ## Introdução
 
-Este programa foi desenvolvido com o intuito de gerar frases aleatorias
+Este é um simples gerador de frases aleatórias em Python, capaz de criar frases baseadas em uma gramática predefinida. Ele pode ser útil em diversas aplicações, desde a geração de textos fictícios até testes de sistemas de processamento de linguagem natural.
+
+## Funcionalidades
+ Geração de frases aleatórias com base em uma gramática predefinida.
+ Possibilidade de expansão da gramática para incluir novos elementos.
+ Flexibilidade para adaptar a gramática de acordo com as necessidades.
+
+## Dependencias
+ pyside6
+ ```
+ pip install PySide6 
+ ```

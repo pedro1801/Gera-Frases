@@ -16,70 +16,66 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
-    QLineEdit, QMainWindow, QPushButton, QSizePolicy,
-    QSpacerItem, QStackedWidget, QTextBrowser, QToolBox,
-    QVBoxLayout, QWidget)
+    QLineEdit, QListView, QMainWindow, QPlainTextEdit,
+    QPushButton, QSizePolicy, QSpacerItem, QStackedWidget,
+    QTextBrowser, QToolBox, QVBoxLayout, QWidget)
 import icons_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(787, 622)
+        MainWindow.resize(728, 622)
         MainWindow.setStyleSheet(u"background-color: rgb(94, 92, 100);")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.centralwidget.setStyleSheet(u"*{\n"
-"	border:none\n"
-"}")
+        self.centralwidget.setStyleSheet(u"*{border:none;}")
         self.horizontalLayout = QHBoxLayout(self.centralwidget)
         self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(0, -1, 0, 0)
         self.esquerdo = QFrame(self.centralwidget)
         self.esquerdo.setObjectName(u"esquerdo")
-        self.esquerdo.setMaximumSize(QSize(200, 16777215))
+        self.esquerdo.setMinimumSize(QSize(0, 0))
+        self.esquerdo.setMaximumSize(QSize(0, 16777215))
+        self.esquerdo.setSizeIncrement(QSize(0, 0))
         self.esquerdo.setFrameShape(QFrame.StyledPanel)
         self.esquerdo.setFrameShadow(QFrame.Raised)
         self.verticalLayout_2 = QVBoxLayout(self.esquerdo)
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, -1, 0, 0)
-        self.frame = QFrame(self.esquerdo)
-        self.frame.setObjectName(u"frame")
-        self.frame.setFrameShape(QFrame.StyledPanel)
-        self.frame.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_4 = QHBoxLayout(self.frame)
-        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
-        self.label_3 = QLabel(self.frame)
-        self.label_3.setObjectName(u"label_3")
-
-        self.horizontalLayout_4.addWidget(self.label_3)
-
-
-        self.verticalLayout_2.addWidget(self.frame)
-
         self.frame_2 = QFrame(self.esquerdo)
         self.frame_2.setObjectName(u"frame_2")
+        sizePolicy = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.frame_2.sizePolicy().hasHeightForWidth())
+        self.frame_2.setSizePolicy(sizePolicy)
+        self.frame_2.setMinimumSize(QSize(0, 0))
+        self.frame_2.setSizeIncrement(QSize(0, 0))
         self.frame_2.setStyleSheet(u"QFrame \n"
 "{\n"
 "	background-color: gray;  /* Cor de fundo padr\u00e3o */\n"
 "}\n"
 "QPushButton {\n"
-"    border-style: solid;\n"
-"    border-width: 2px;\n"
-"    border-radius: 5px;  /* Arredonda os cantos */\n"
-"    border-color: black;\n"
+"  	border: 2px;\n"
+"	border-top-left-radius: 10px;\n"
+"	border-style: solid;\n"
 "    background-color: #f0f0f0;  /* Cor de fundo padr\u00e3o */\n"
 "    color: black;  /* Cor do texto padr\u00e3o */\n"
 "    padding: 5px;  /* Espa\u00e7amento interno */\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: #04AA6D;  /* Verde ao passar o mouse */\n"
-"    color: white;  /* Cor do texto ao passar o mouse */\n"
+"    background-color: #4F4F4F;  /* Verde ao passar o mouse */\n"
+"	color: black;\n"
 "}\n"
-"")
+"QToolBox\n"
+"{\n"
+"	border:none;\n"
+"\n"
+"}")
         self.frame_2.setFrameShape(QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QFrame.Raised)
         self.verticalLayout_3 = QVBoxLayout(self.frame_2)
@@ -88,26 +84,27 @@ class Ui_MainWindow(object):
         self.toolBox.setObjectName(u"toolBox")
         self.toolBox.setSizeIncrement(QSize(30, 0))
         self.toolBox.setStyleSheet(u"")
-        self.page = QWidget()
-        self.page.setObjectName(u"page")
-        self.page.setGeometry(QRect(0, 0, 182, 489))
-        self.verticalLayout_4 = QVBoxLayout(self.page)
+        self.Home = QWidget()
+        self.Home.setObjectName(u"Home")
+        self.Home.setGeometry(QRect(0, 0, 48, 510))
+        self.Home.setAcceptDrops(False)
+        self.verticalLayout_4 = QVBoxLayout(self.Home)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
-        self.btn_home = QPushButton(self.page)
+        self.btn_home = QPushButton(self.Home)
         self.btn_home.setObjectName(u"btn_home")
         self.btn_home.setMinimumSize(QSize(30, 0))
         self.btn_home.setStyleSheet(u"")
 
         self.verticalLayout_4.addWidget(self.btn_home)
 
-        self.btn_Insert = QPushButton(self.page)
+        self.btn_Insert = QPushButton(self.Home)
         self.btn_Insert.setObjectName(u"btn_Insert")
         self.btn_Insert.setMinimumSize(QSize(30, 0))
         self.btn_Insert.setSizeIncrement(QSize(0, 0))
 
         self.verticalLayout_4.addWidget(self.btn_Insert)
 
-        self.btn_VerFrases = QPushButton(self.page)
+        self.btn_VerFrases = QPushButton(self.Home)
         self.btn_VerFrases.setObjectName(u"btn_VerFrases")
         self.btn_VerFrases.setMinimumSize(QSize(30, 0))
         self.btn_VerFrases.setSizeIncrement(QSize(0, 0))
@@ -118,18 +115,25 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_4.addItem(self.verticalSpacer)
 
-        self.btn_sobre = QPushButton(self.page)
+        self.btn_sobre = QPushButton(self.Home)
         self.btn_sobre.setObjectName(u"btn_sobre")
         self.btn_sobre.setMinimumSize(QSize(30, 0))
         self.btn_sobre.setSizeIncrement(QSize(0, 0))
 
         self.verticalLayout_4.addWidget(self.btn_sobre)
 
-        self.toolBox.addItem(self.page, u"Page 1")
-        self.page_2 = QWidget()
-        self.page_2.setObjectName(u"page_2")
-        self.page_2.setGeometry(QRect(0, 0, 182, 489))
-        self.toolBox.addItem(self.page_2, u"Page 2")
+        self.toolBox.addItem(self.Home, u"Home")
+        self.Informaoes = QWidget()
+        self.Informaoes.setObjectName(u"Informaoes")
+        self.Informaoes.setGeometry(QRect(0, 0, 86, 86))
+        self.verticalLayout_11 = QVBoxLayout(self.Informaoes)
+        self.verticalLayout_11.setObjectName(u"verticalLayout_11")
+        self.plainTextEdit = QPlainTextEdit(self.Informaoes)
+        self.plainTextEdit.setObjectName(u"plainTextEdit")
+
+        self.verticalLayout_11.addWidget(self.plainTextEdit)
+
+        self.toolBox.addItem(self.Informaoes, u"Informa\u00e7oes")
 
         self.verticalLayout_3.addWidget(self.toolBox)
 
@@ -147,6 +151,25 @@ class Ui_MainWindow(object):
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.Frame_cima = QFrame(self.main_frame)
         self.Frame_cima.setObjectName(u"Frame_cima")
+        self.Frame_cima.setSizeIncrement(QSize(0, 0))
+        self.Frame_cima.setStyleSheet(u"QFrame\n"
+"{\n"
+"	border: 5px;\n"
+"    border-color: #272626;\n"
+"    border-style: solid;\n"
+"    border-right-color: #4F4F4F;\n"
+"	border-bottom-color: #4F4F4F;\n"
+"    background-color : gray;\n"
+"}\n"
+"QLabel\n"
+"{\n"
+"border:none;\n"
+"}\n"
+"QPushButton\n"
+"{\n"
+"	background-color : gray;\n"
+"}\n"
+"")
         self.Frame_cima.setFrameShape(QFrame.StyledPanel)
         self.Frame_cima.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_2 = QHBoxLayout(self.Frame_cima)
@@ -162,6 +185,7 @@ class Ui_MainWindow(object):
 
         self.label = QLabel(self.Frame_cima)
         self.label.setObjectName(u"label")
+        self.label.setStyleSheet(u"")
 
         self.horizontalLayout_2.addWidget(self.label)
 
@@ -170,11 +194,12 @@ class Ui_MainWindow(object):
 
         self.Frame_meio = QFrame(self.main_frame)
         self.Frame_meio.setObjectName(u"Frame_meio")
-        sizePolicy = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.Frame_meio.sizePolicy().hasHeightForWidth())
-        self.Frame_meio.setSizePolicy(sizePolicy)
+        sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Expanding)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.Frame_meio.sizePolicy().hasHeightForWidth())
+        self.Frame_meio.setSizePolicy(sizePolicy1)
+        self.Frame_meio.setMaximumSize(QSize(16777215, 16777100))
         self.Frame_meio.setFrameShape(QFrame.StyledPanel)
         self.Frame_meio.setFrameShadow(QFrame.Raised)
         self.verticalLayout_5 = QVBoxLayout(self.Frame_meio)
@@ -214,18 +239,17 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton {\n"
-"    border-style: solid;\n"
-"    border-width: 2px;\n"
-"    border-radius: 5px;  /* Arredonda os cantos */\n"
-"    border-color: black;\n"
-"    background-color: #f0f0f0;  /* Cor de fundo padr\u00e3o */\n"
-"    color: black;  /* Cor do texto padr\u00e3o */\n"
-"    padding: 5px;  /* Espa\u00e7amento interno */\n"
+"  border: 2px;\n"
+"  border-top-left-radius: 5px;\n"
+"  border-style: solid;\n"
+"  background-color: #f0f0f0;  /* Cor de fundo padr\u00e3o */\n"
+"  color: black;  /* Cor do texto padr\u00e3o */\n"
+"  padding: 5px;  /* Espa\u00e7amento interno */\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: #04AA6D;  /* Verde ao passar o mouse */\n"
-"    color: white;  /* Cor do texto ao passar o mouse */\n"
+"    background-color: #4F4F4F;  /* Verde ao passar o mouse */\n"
+"	color: black;\n"
 "}\n"
 "")
         self.FrameInsert.setFrameShape(QFrame.StyledPanel)
@@ -234,6 +258,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_8.setObjectName(u"verticalLayout_8")
         self.label_5 = QLabel(self.FrameInsert)
         self.label_5.setObjectName(u"label_5")
+        self.label_5.setMaximumSize(QSize(16777215, 50))
 
         self.verticalLayout_8.addWidget(self.label_5)
 
@@ -299,6 +324,7 @@ class Ui_MainWindow(object):
 
         self.btn_inserir = QPushButton(self.FrameInsert)
         self.btn_inserir.setObjectName(u"btn_inserir")
+        self.btn_inserir.setLayoutDirection(Qt.LeftToRight)
 
         self.verticalLayout_8.addWidget(self.btn_inserir, 0, Qt.AlignHCenter)
 
@@ -312,8 +338,49 @@ class Ui_MainWindow(object):
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
         self.frame_3 = QFrame(self.pg_verValores)
         self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setStyleSheet(u"QListView\n"
+"{\n"
+"	border: 5px;\n"
+"    border-color: #272626;\n"
+"    border-style: solid;\n"
+"    background-color : #d6d1d1;\n"
+"}\n"
+"\n"
+"\n"
+"QPushButton {\n"
+"   border: 2px;\n"
+"  border-top-left-radius: 10px;\n"
+"  border-bottom-right-radius: 10px;\n"
+"  border-style: solid;\n"
+"  background-color: #f0f0f0;  /* Cor de fundo padr\u00e3o */\n"
+"  color: black;  /* Cor do texto padr\u00e3o */\n"
+"  padding: 5px;  /* Espa\u00e7amento interno */\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #4F4F4F;  /* Verde ao passar o mouse */\n"
+"	color: black;\n"
+"}\n"
+"")
         self.frame_3.setFrameShape(QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_12 = QVBoxLayout(self.frame_3)
+        self.verticalLayout_12.setObjectName(u"verticalLayout_12")
+        self.ListaFrase = QListView(self.frame_3)
+        self.ListaFrase.setObjectName(u"ListaFrase")
+
+        self.verticalLayout_12.addWidget(self.ListaFrase)
+
+        self.btn_Busca = QPushButton(self.frame_3)
+        self.btn_Busca.setObjectName(u"btn_Busca")
+
+        self.verticalLayout_12.addWidget(self.btn_Busca)
+
+        self.btn_limpar = QPushButton(self.frame_3)
+        self.btn_limpar.setObjectName(u"btn_limpar")
+
+        self.verticalLayout_12.addWidget(self.btn_limpar)
+
 
         self.verticalLayout_9.addWidget(self.frame_3)
 
@@ -343,20 +410,6 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.Frame_meio)
 
-        self.Frame_baixo = QFrame(self.main_frame)
-        self.Frame_baixo.setObjectName(u"Frame_baixo")
-        self.Frame_baixo.setFrameShape(QFrame.StyledPanel)
-        self.Frame_baixo.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_3 = QHBoxLayout(self.Frame_baixo)
-        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.label_2 = QLabel(self.Frame_baixo)
-        self.label_2.setObjectName(u"label_2")
-
-        self.horizontalLayout_3.addWidget(self.label_2)
-
-
-        self.verticalLayout.addWidget(self.Frame_baixo)
-
 
         self.horizontalLayout.addWidget(self.main_frame)
 
@@ -373,16 +426,35 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"GeraFrases", None))
+#if QT_CONFIG(tooltip)
+        self.Home.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(statustip)
+        self.Home.setStatusTip("")
+#endif // QT_CONFIG(statustip)
+#if QT_CONFIG(whatsthis)
+        self.Home.setWhatsThis("")
+#endif // QT_CONFIG(whatsthis)
         self.btn_home.setText(QCoreApplication.translate("MainWindow", u"Home", None))
-        self.btn_Insert.setText(QCoreApplication.translate("MainWindow", u"Inserir Valores", None))
+        self.btn_Insert.setText(QCoreApplication.translate("MainWindow", u"Inserir Frases", None))
         self.btn_VerFrases.setText(QCoreApplication.translate("MainWindow", u"Ver Frases", None))
         self.btn_sobre.setText(QCoreApplication.translate("MainWindow", u"Sobre Programa", None))
-        self.toolBox.setItemText(self.toolBox.indexOf(self.page), QCoreApplication.translate("MainWindow", u"Page 1", None))
-        self.toolBox.setItemText(self.toolBox.indexOf(self.page_2), QCoreApplication.translate("MainWindow", u"Page 2", None))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.Home), QCoreApplication.translate("MainWindow", u"Home", None))
+        self.plainTextEdit.setPlainText(QCoreApplication.translate("MainWindow", u"Trabalho deselvolvido\n"
+"                por\n"
+"\n"
+"      Pedro Eduardo\n"
+"\n"
+"      Thierry Vinicius\n"
+"\n"
+"      Leonardo Rabeiro\n"
+"\n"
+"      Leonardo Ramos\n"
+"", None))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.Informaoes), QCoreApplication.translate("MainWindow", u"Informa\u00e7oes", None))
         self.pushButton.setText("")
-        self.label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.label_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/icons/logo4.png\"/></p></body></html>", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"Gera Frases", None))
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/icons/logoino.png\"/></p></body></html>", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">INSERIR PALAVRAS</span></p></body></html>", None))
         self.pessoaMasculina.setPlaceholderText(QCoreApplication.translate("MainWindow", u"PESSOA MASCULINO", None))
         self.pessoaFeminino.setPlaceholderText(QCoreApplication.translate("MainWindow", u"PESSOA FEMININO", None))
@@ -395,6 +467,8 @@ class Ui_MainWindow(object):
         self.verbosPPlural.setPlaceholderText(QCoreApplication.translate("MainWindow", u"VERBOS NA PRIMEIRA PESSOA DO PLURAL", None))
         self.verbosSPlural.setPlaceholderText(QCoreApplication.translate("MainWindow", u"VERBOS NA SEGUNDA PESSOA DO PLURAL", None))
         self.btn_inserir.setText(QCoreApplication.translate("MainWindow", u"Inserir", None))
+        self.btn_Busca.setText(QCoreApplication.translate("MainWindow", u"Gerar Frases", None))
+        self.btn_limpar.setText(QCoreApplication.translate("MainWindow", u"Limpar Lista de Frases", None))
         self.textBrowser.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -405,8 +479,7 @@ class Ui_MainWindow(object):
                         ".</li>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;\"><br /></p>\n"
 "<li style=\"\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Locais est\u00e3o se referindo a locais reais, por exemplo: mercado, escola, livraria...</li>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;\"><br /></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;\"><br /></p>\n"
 "<li style=\"\" style=\" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Os verbos devem ser conjugados no passado.</li></ol></body></html>", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"GeraFrases", None))
     # retranslateUi
 
