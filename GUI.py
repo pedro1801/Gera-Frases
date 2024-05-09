@@ -344,6 +344,7 @@ class Ui_MainWindow(object):
 "    border-color: #272626;\n"
 "    border-style: solid;\n"
 "    background-color : #d6d1d1;\n"
+"    color: black;\n"
 "}\n"
 "\n"
 "\n"
@@ -447,7 +448,7 @@ class Ui_MainWindow(object):
 "\n"
 "      Thierry Vinicius\n"
 "\n"
-"      Leonardo Rabeiro\n"
+"      Leonardo Lescano\n"
 "\n"
 "      Leonardo Ramos\n"
 "", None))
@@ -459,7 +460,7 @@ class Ui_MainWindow(object):
         self.pessoaMasculina.setPlaceholderText(QCoreApplication.translate("MainWindow", u"PESSOA MASCULINO (EX:Pedro,Joao..)", None))
         self.pessoaFeminino.setPlaceholderText(QCoreApplication.translate("MainWindow", u"PESSOA FEMININO (EX:Maria,Ana..)", None))
         self.pessoaPluralMasculino.setPlaceholderText(QCoreApplication.translate("MainWindow", u"PESSOA NO PLURAL MASCULINO (EX:Garotos,Meninos..)", None))
-        self.pessoaPluralFeminino.setPlaceholderText(QCoreApplication.translate("MainWindow", u"PESSOA NO PLURAL FEMININO (EX:Gartas,Meninas..)", None))
+        self.pessoaPluralFeminino.setPlaceholderText(QCoreApplication.translate("MainWindow", u"PESSOA NO PLURAL FEMININO (EX:Garotas,Meninas..)", None))
         self.locaisMasculinos.setPlaceholderText(QCoreApplication.translate("MainWindow", u"LOCAIS MASCULINOS (EX:Bracos,Restaurante..)", None))
         self.locaisFemininos.setPlaceholderText(QCoreApplication.translate("MainWindow", u"LOCAIS FEMININOS (EX:Casa,Pra\u00e7a..)", None))
         self.verbosPsingular.setPlaceholderText(QCoreApplication.translate("MainWindow", u"VERBOS NA PRIMEIRA PESSOA DO SINGULAR (EX:Estudei,Comprei..)", None))
